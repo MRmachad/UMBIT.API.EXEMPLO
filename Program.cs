@@ -1,4 +1,5 @@
-using UMBIT.Core.Repositorio;
+using UMBIT.API.EXEMPLO.Configurates;
+using UMBIT.API.EXEMPLO.Servico;
 using UMBIT.Core.Repositorio.ConfigUse;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,8 +10,10 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.ConfigureServices(builder.Configuration);
-builder.Services.AddScoped<IDataServiceFactory, DataServiceFactory>();
+var conexao = builder.Configuration.GetSection("ConnectionString").Value ?? "";
+builder.Services.ConfigureServices(conexao);
+
+builder.Services.AddScoped<IServicoDeGato, ServicoDeGato>();
 
 var app = builder.Build();
 
@@ -20,6 +23,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseConfigureMigrates();
 
 app.UseHttpsRedirection();
 

@@ -3,9 +3,13 @@ using UMBIT.Core.Repositorio;
 
 namespace UMBIT.API.EXEMPLO.Servico
 {
-    public class ServicoDeGato : ServiceBase<Gato>
+    public interface IServicoDeGato : IServiceBase<Gato>
     {
-        public ServicoDeGato(DataServiceFactory dataServiceFactory) : base(dataServiceFactory)
+    }
+
+    public class ServicoDeGato :  ServiceBase<Gato>, IServicoDeGato
+    {
+        public ServicoDeGato(IDataServiceFactory dataServiceFactory) : base(dataServiceFactory)
         {
         }
     }

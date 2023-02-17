@@ -15,9 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="UMBIT.Core">
-      <HintPath>BINARIO\UMBIT.Core.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\UMBIT.Prototico\src\Building Blocks\core\Prototico.Core\UMBIT.Core.csproj" />
   </ItemGroup>
 
 </Project>
