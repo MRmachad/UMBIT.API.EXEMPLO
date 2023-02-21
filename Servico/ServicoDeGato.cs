@@ -1,5 +1,7 @@
 ﻿using UMBIT.API.EXEMPLO.model;
 using UMBIT.Core.Repositorio;
+using UMBIT.CORE.API.Servico;
+using UMBIT.CORE.API.Servico.Interface;
 
 namespace UMBIT.API.EXEMPLO.Servico
 {
