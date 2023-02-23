@@ -2,8 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>f9f8ce9c-bf11-47c4-96ed-af268d3bbf5c</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
@@ -18,6 +16,7 @@
 
   <ItemGroup>
     <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.14" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0-preview.1.23111.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0-preview.1.23111.4">
       <PrivateAssets>all</PrivateAssets>
@@ -28,11 +27,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="Prototico.Core.API">
-      <HintPath>BINARIO\Prototico.Core.API.dll</HintPath>
+    <Reference Include="UMBIT.Prototico.Core">
+      <HintPath>BINARIO\UMBIT.Prototico.Core.dll</HintPath>
     </Reference>
-    <Reference Include="UMBIT.Core">
-      <HintPath>BINARIO\UMBIT.Core.dll</HintPath>
+    <Reference Include="UMBIT.Prototico.Core.API">
+      <HintPath>BINARIO\UMBIT.Prototico.Core.API.dll</HintPath>
     </Reference>
   </ItemGroup>
 

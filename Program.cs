@@ -1,30 +1,20 @@
-using UMBIT.API.EXEMPLO.Configurates;
-using UMBIT.API.EXEMPLO.Servico;
-using UMBIT.CORE.API.Configurations;
+using Microsoft.AspNetCore.Builder;
+using Prototico.Core.API.Configurate.ApiConfigurate;
+using Prototico.Core.API.Configurate.JsonWebToken;
+using Prototico.Core.API.Configurate.Swagger;
+using UMBIT.API.EXEMPLO.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-builder.Services.AddServiceMySQL(builder.Configuration);
+builder.Services.AddApiConfiguration();
+builder.Services.AddInjectionDependencyConfiguration(); 
+builder.Services.AddUMBITSwaggerConfiguration();
+builder.Services.AddUMBITServiceMySQL(builder.Configuration);
+builder.Services.AddUMBITServiceJWT(builder.Configuration);
 
-builder.Services.AddScoped<IServicoDeGato, ServicoDeGato>();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
-
-app.UseConfigureMigrates();
-
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
+app.UseApiConfiguration(app.Environment);
 
 app.Run();

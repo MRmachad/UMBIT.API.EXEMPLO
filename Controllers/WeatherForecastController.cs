@@ -1,4 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using UMBIT.API.EXEMPLO.Servico;
 using UMBIT.Core.Repositorio;
 
@@ -27,7 +31,7 @@ namespace UMBIT.API.EXEMPLO.Controllers
         public IEnumerable<WeatherForecast> Get()
         {
 
-            this.ServicoDeGato.AdicionaObjeto(new model.Gato());
+            this.ServicoDeGato.AdicionaObjeto(new model.Gato() { Tipo = ""});
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateTime.Now.AddDays(index),

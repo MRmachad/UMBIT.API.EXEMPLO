@@ -6,5 +6,7 @@ namespace UMBIT.API.EXEMPLO.model
     {
         public bool Miar { get; set; }
         public bool t { get; set; }
+
+        public string Tipo { get; set; }
     }
 }
