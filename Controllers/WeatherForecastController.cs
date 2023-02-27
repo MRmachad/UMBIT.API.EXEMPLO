@@ -3,8 +3,9 @@ using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using UMBIT.API.EXEMPLO.Servico;
-using UMBIT.Core.Repositorio;
+using UMBIT.Prototico.Core.API.Servico.Interface;
 
 namespace UMBIT.API.EXEMPLO.Controllers
 {
@@ -12,33 +13,54 @@ namespace UMBIT.API.EXEMPLO.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
-        {
-        "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-    };
 
         private IServicoDeGato ServicoDeGato;
-        private readonly ILogger<WeatherForecastController> _logger;
+        private IServicoDeIdentidade ServicoDeIdentidade;
 
-        public WeatherForecastController(ILogger<WeatherForecastController> logger, IServicoDeGato ServicoDeGato)
+        public WeatherForecastController(IServicoDeGato ServicoDeGato, IServicoDeIdentidade servicoDeIdentidade)
         {
             this.ServicoDeGato = ServicoDeGato;
+            this.ServicoDeIdentidade = servicoDeIdentidade;
 
-            _logger = logger;
         }
 
-        [HttpGet(Name = "GetWeatherForecast")]
-        public IEnumerable<WeatherForecast> Get()
+        [HttpGet("GetWeatherForecast")]
+        public bool AddGato()
         {
 
-            this.ServicoDeGato.AdicionaObjeto(new model.Gato() { Tipo = ""});
-            return Enumerable.Range(1, 5).Select(index => new WeatherForecast
-            {
-                Date = DateTime.Now.AddDays(index),
-                TemperatureC = Random.Shared.Next(-20, 55),
-                Summary = Summaries[Random.Shared.Next(Summaries.Length)]
-            })
-            .ToArray();
+            this.ServicoDeGato.AdicionaObjeto(new model.Gato() { Tipo = "" });
+
+            return true;
+
+        }
+
+
+        [HttpGet("cadastro")]
+        public async Task<IActionResult> Cadastro(string user, string senha)
+        {
+            return Ok(await this.ServicoDeIdentidade.Cadastro(user, senha));
+
+        }
+
+        [HttpGet("login")]
+        public async Task<IActionResult> Login(string user, string senha)
+        {
+            return Ok(await this.ServicoDeIdentidade.Login(user, senha));
+            
+
+        }
+
+        [HttpGet("autentique")]
+        public async Task<IActionResult> Autenticar(string user, string senha)
+        {
+            return Ok(await this.ServicoDeIdentidade.AutenticaUsuarioAsync(user, senha));
+
+        }
+
+        [HttpGet("logout")]
+        public async Task<IActionResult> Logout(string user, string senha)
+        {
+            return Ok(await this.ServicoDeIdentidade.Logout(user, senha));
 
         }
     }

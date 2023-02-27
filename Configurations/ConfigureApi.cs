@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
 using System.Linq;
+using UMBIT.Prototico.Core.API.Configurate.IdentityConfigurate;
 
 namespace UMBIT.API.EXEMPLO.Configurations
 {
@@ -42,7 +43,7 @@ namespace UMBIT.API.EXEMPLO.Configurations
             app.UseHttpsRedirection();
             app.UseRouting();
             app.UseCors("Total");
-            app.UseAuthConfiguration();
+            app.UseUMBITIdentityConfiguration();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
@@ -57,6 +58,7 @@ namespace UMBIT.API.EXEMPLO.Configurations
             using (var serviceScope = app.ApplicationServices.GetService<IServiceScopeFactory>()?.CreateScope())
             {
                 var context = serviceScope?.ServiceProvider.GetRequiredService<DbContext>();
+                
                 if (context.Database.GetPendingMigrations().Any())
                 {
                     try
