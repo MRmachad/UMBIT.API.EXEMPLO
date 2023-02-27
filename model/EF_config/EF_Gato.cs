@@ -1,12 +1,15 @@
-﻿using UMBIT.Core.Repositorio.EntityConfigurate;
+﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using UMBIT.Core.Repositorio.EntityConfigurate;
 
 namespace UMBIT.API.EXEMPLO.model.EF_config
 {
     public class EF_Gato : CoreEntityConfigurate<Gato>
     {
-        public override void ConfigureEntidade()
+
+
+        public override void ConfigureEntidade(EntityTypeBuilder<Gato> builder)
         {
-            HasKey(i => i.Id);
+            builder.HasKey(i => i.Id);
         }
     }
 }

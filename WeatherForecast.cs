@@ -1,3 +1,5 @@
+using System;
+
 namespace UMBIT.API.EXEMPLO
 {
     public class WeatherForecast

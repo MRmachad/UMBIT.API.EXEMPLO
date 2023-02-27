@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\macha\\Documents\\Dev\\ByMySelf\\C#\\UMBIT.API.EXEMPLO\\UMBIT.API.EXEMPLO\\UMBIT.API.EXEMPLO.csproj": {}
+    "D:\\Dev\\ByMySelf\\UMBIT.API.EXEMPLO\\UMBIT.API.EXEMPLO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\macha\\Documents\\Dev\\ByMySelf\\C#\\UMBIT.API.EXEMPLO\\UMBIT.API.EXEMPLO\\UMBIT.API.EXEMPLO.csproj": {
+    "D:\\Dev\\ByMySelf\\UMBIT.API.EXEMPLO\\UMBIT.API.EXEMPLO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\macha\\Documents\\Dev\\ByMySelf\\C#\\UMBIT.API.EXEMPLO\\UMBIT.API.EXEMPLO\\UMBIT.API.EXEMPLO.csproj",
+        "projectUniqueName": "D:\\Dev\\ByMySelf\\UMBIT.API.EXEMPLO\\UMBIT.API.EXEMPLO.csproj",
         "projectName": "UMBIT.API.EXEMPLO",
-        "projectPath": "C:\\Users\\macha\\Documents\\Dev\\ByMySelf\\C#\\UMBIT.API.EXEMPLO\\UMBIT.API.EXEMPLO\\UMBIT.API.EXEMPLO.csproj",
-        "packagesPath": "C:\\Users\\macha\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\macha\\Documents\\Dev\\ByMySelf\\C#\\UMBIT.API.EXEMPLO\\UMBIT.API.EXEMPLO\\obj\\",
+        "projectPath": "D:\\Dev\\ByMySelf\\UMBIT.API.EXEMPLO\\UMBIT.API.EXEMPLO.csproj",
+        "packagesPath": "C:\\Users\\LeonardoSilva\\.nuget\\packages\\",
+        "outputPath": "D:\\Dev\\ByMySelf\\UMBIT.API.EXEMPLO\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\macha\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\LeonardoSilva\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -48,9 +44,39 @@
               "target": "Package",
               "version": "[6.4.4, )"
             },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[6.0.14, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.0-preview.1.23111.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.0-preview.1.23111.4, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
-              "version": "[6.2.3, )"
+              "version": "[6.5.0, )"
             }
           },
           "imports": [

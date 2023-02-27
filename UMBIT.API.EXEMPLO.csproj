@@ -2,21 +2,39 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>enable</Nullable>
-    <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>f9f8ce9c-bf11-47c4-96ed-af268d3bbf5c</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <DockerfileContext>.</DockerfileContext>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="EntityFramework" Version="6.4.4" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <Compile Remove="BINARIO\**" />
+    <Content Remove="BINARIO\**" />
+    <EmbeddedResource Remove="BINARIO\**" />
+    <None Remove="BINARIO\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="UMBIT.Core">
-      <HintPath>BINARIO\UMBIT.Core.dll</HintPath>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="FluentValidation" Version="11.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.14" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.14" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0-preview.1.23111.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0-preview.1.23111.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="7.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="UMBIT.Prototico.Core">
+      <HintPath>BINARIO\UMBIT.Prototico.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="UMBIT.Prototico.Core.API">
+      <HintPath>BINARIO\UMBIT.Prototico.Core.API.dll</HintPath>
     </Reference>
   </ItemGroup>
 
