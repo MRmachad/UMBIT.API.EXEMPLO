@@ -3298,11 +3298,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dev\\ByMySelf\\UMBIT.API.EXEMPLO\\UMBIT.API.EXEMPLO.csproj",
+      "projectUniqueName": "D:\\Dev\\ByMySelf\\UMBIT.API.EXEMPLO\\UMBIT.API.EXEMPLO\\UMBIT.API.EXEMPLO.csproj",
       "projectName": "UMBIT.API.EXEMPLO",
-      "projectPath": "D:\\Dev\\ByMySelf\\UMBIT.API.EXEMPLO\\UMBIT.API.EXEMPLO.csproj",
+      "projectPath": "D:\\Dev\\ByMySelf\\UMBIT.API.EXEMPLO\\UMBIT.API.EXEMPLO\\UMBIT.API.EXEMPLO.csproj",
       "packagesPath": "C:\\Users\\LeonardoSilva\\.nuget\\packages\\",
-      "outputPath": "D:\\Dev\\ByMySelf\\UMBIT.API.EXEMPLO\\obj\\",
+      "outputPath": "D:\\Dev\\ByMySelf\\UMBIT.API.EXEMPLO\\UMBIT.API.EXEMPLO\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LeonardoSilva\\AppData\\Roaming\\NuGet\\NuGet.Config",

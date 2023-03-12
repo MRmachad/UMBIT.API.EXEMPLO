@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+https://go.microsoft.com/fwlink/?LinkID=208121.
+-->
+<Project>
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\Pub\umbit_api_</_PublishTargetUrl>
+    <History>True|2023-03-08T01:45:55.1254511Z;False|2023-03-07T22:45:44.4244163-03:00;True|2023-03-07T22:40:43.2757111-03:00;False|2023-03-07T22:38:00.6842163-03:00;True|2023-03-07T22:29:05.3568761-03:00;False|2023-03-07T22:28:33.4300650-03:00;True|2023-03-07T21:54:20.0973554-03:00;</History>
+    <LastFailureDetails />
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+  </PropertyGroup>
+</Project>

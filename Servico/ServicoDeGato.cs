@@ -12,10 +12,9 @@ namespace UMBIT.API.EXEMPLO.Servico
 
     public class ServicoDeGato :  ServicoDeEntidadeBase<Gato>, IServicoDeGato
     {
-        public readonly IServicoDeJWT servicoDeJWT;
-        public ServicoDeGato(IDataServiceFactory dataServiceFactory, IServicoDeJWT servicoDeJWT) : base(dataServiceFactory)
+        
+        public ServicoDeGato(IDataServiceFactory dataServiceFactory) : base(dataServiceFactory)
         {
-            this.servicoDeJWT = servicoDeJWT;
         }
     }
 }

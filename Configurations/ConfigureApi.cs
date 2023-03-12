@@ -33,12 +33,11 @@ namespace UMBIT.API.EXEMPLO.Configurations
 
         public static void UseApiConfiguration(this IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment())
-            {
+
                 app.UseSwagger();
                 app.UseSwaggerUI();
                 app.UseDeveloperExceptionPage();
-            }
+         
 
             app.UseHttpsRedirection();
             app.UseRouting();
