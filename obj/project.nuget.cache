@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kQ2dgg2w09MeKX/0oHZ3Ct78lINyGJqijcqdqGrSLlts4a3kBsnGQo18NnOgokN9Ye38s0Sr4BgS+7HQLCsaIw==",
+  "dgSpecHash": "RioiQQHRmU7VhPdk+5Jl/KwfFv7eZOo+PkmoLXkYSW25ArKEq0m7gh06GEgi/+ZcTNNl73QiNelcqEAEb1Uh2w==",
   "success": true,
-  "projectFilePath": "D:\\Dev\\ByMySelf\\UMBIT.API.EXEMPLO\\UMBIT.API.EXEMPLO.csproj",
+  "projectFilePath": "D:\\Dev\\ByMySelf\\UMBIT.API.EXEMPLO\\UMBIT.API.EXEMPLO\\UMBIT.API.EXEMPLO.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LeonardoSilva\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\LeonardoSilva\\.nuget\\packages\\fluentvalidation\\11.0.0\\fluentvalidation.11.0.0.nupkg.sha512",
