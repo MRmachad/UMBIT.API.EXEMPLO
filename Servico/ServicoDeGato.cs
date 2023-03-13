@@ -13,7 +13,7 @@ namespace UMBIT.API.EXEMPLO.Servico
     public class ServicoDeGato :  ServicoDeEntidadeBase<Gato>, IServicoDeGato
     {
         
-        public ServicoDeGato(IDataServiceFactory dataServiceFactory) : base(dataServiceFactory)
+        public ServicoDeGato(IUnidadeDeTrabalho unidadeDeTrabalho) : base(unidadeDeTrabalho)
         {
         }
     }

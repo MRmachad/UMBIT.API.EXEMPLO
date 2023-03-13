@@ -7,7 +7,7 @@ using UMBIT.Prototico.Core.API.Configurate.IdentityConfigurate;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddApiConfiguration();
-builder.Services.AddInjectionDependencyConfiguration(); 
+builder.Services.AddInjectionDependencyConfiguration(builder.Configuration); 
 builder.Services.AddUMBITSwaggerConfiguration();
 builder.Services.AddUMBITServiceMySQL(builder.Configuration);
 builder.Services.AddUMBITIdentityConfiguration(builder.Configuration);

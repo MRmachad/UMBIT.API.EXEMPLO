@@ -16,12 +16,13 @@ namespace UMBIT.API.EXEMPLO.Controllers
 
         private IServicoDeGato ServicoDeGato;
         private IServicoDeIdentidade ServicoDeIdentidade;
+        private IServicoDeAPI servicoDeAPI; 
 
-        public HomeController(IServicoDeGato ServicoDeGato, IServicoDeIdentidade servicoDeIdentidade)
+        public HomeController(IServicoDeGato ServicoDeGato, IServicoDeIdentidade servicoDeIdentidade, IServicoDeAPI servicoDeAPI)
         {
             this.ServicoDeGato = ServicoDeGato;
             this.ServicoDeIdentidade = servicoDeIdentidade;
-
+            this.servicoDeAPI = servicoDeAPI;
         }
 
         [HttpGet("GetHome")]
@@ -31,6 +32,15 @@ namespace UMBIT.API.EXEMPLO.Controllers
             this.ServicoDeGato.AdicionaObjeto(new model.Gato() { Tipo = String.Empty });
 
             return Ok();
+
+        }
+
+        [HttpGet("teste-api")]
+        public async Task<IActionResult> getapiAsync()
+        {
+            var res  = await this.servicoDeAPI.GetHTTPBinAsync();
+
+            return Ok(res);
 
         }
 
